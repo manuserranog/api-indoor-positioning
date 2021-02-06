@@ -10,7 +10,7 @@ const specs = swaggerJsdoc({
   apis: ['src/docs/*.yml', 'src/routes/v1/*.js'],
 });
 
-router.use('/', swaggerUi.serve);
+router.use('/api-docs', swaggerUi.serve);
 router.get(
   '/',
   swaggerUi.setup(specs, {
